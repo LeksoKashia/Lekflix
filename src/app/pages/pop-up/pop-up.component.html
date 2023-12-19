@@ -1,0 +1,21 @@
+<div class="modal fade" id="deleteEmployeeModal" tabindex="-1" role="dialog" aria-labelledby="deleteModelLabel"
+  aria-hidden="true" (click)="close()">
+  <div class="modal-dialog" style="margin-top: 100px; max-width: 800px; width: 100%; height: 500px;" role="document">
+    <div class="modal-content" style="background-color: black;">
+      <div class="modal-header">
+        <h2 class="modal-title" id="deleteModelLabel" style="margin-bottom: 0;">{{category}} movies</h2>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="musics" id="musics" #musicsDiv>
+          <div *ngFor="let t of movies; let i = index" style="padding: 30px;">
+            <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="site-movies" alt="..."
+              [routerLink]="['/movie', t.id]" (click)="close()">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

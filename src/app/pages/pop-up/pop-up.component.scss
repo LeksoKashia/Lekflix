@@ -1,0 +1,32 @@
+.musics{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  gap: 20px; 
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.793);
+  height: 400px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+img{
+  height: 230px;
+  width: 180px;
+}
+
+.modal-title{
+  color: white;
+}
+
+.site-movies{
+  width: 180px;
+  height: 250px;
+  transition: transform 450ms;
+  border-radius: 5px;
+}
+.site-movies:hover{
+  transform: scale(1.09);
+  cursor: pointer;
+}
