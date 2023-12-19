@@ -1,4 +1,6 @@
-<div class="contain">
+<app-header [moviess]="navbg"></app-header>
+<div class="contain" id="contain">
+  <h1 style="text-align: center; padding: 50px; font-size: 3rem;">Page not finished </h1>
   <div class="row p-5">
     <div class="col-lg-2" *ngIf="getMovieDetailResult.poster_path">
       <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}">

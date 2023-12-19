@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 
 @Component({
@@ -11,6 +11,30 @@ export class HomeComponent implements OnInit {
   constructor(private service: MovieApiServiceService) {
    }
  
+
+ 
+   bannerResult: any = [];
+   trendingMovieResult: any = [];
+   moviesResult: any = [];
+ 
+   movieCategory!: string;
+   movieCategoryText!: string;
+   
+   navbg!:any;
+   @HostListener('document:scroll') scrollover(){
+     
+     if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+     {
+       this.navbg = {
+         'background-color':'rgba(0,0,0,0.7)'
+       }
+     }else
+     {
+         this.navbg = {
+           'background-color':''
+         }
+     }
+   }
 
   openDialog(): void {
 
@@ -27,12 +51,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  bannerResult: any = [];
-  trendingMovieResult: any = [];
-  moviesResult: any = [];
 
-  movieCategory!: string;
-  movieCategoryText!: string;
 
   ngOnInit(): void {
     this.bannerData();

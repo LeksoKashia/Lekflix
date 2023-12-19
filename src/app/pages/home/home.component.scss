@@ -183,9 +183,9 @@ select {
     background-image: linear-gradient(315deg, #ff7878 0%, #ff0000 74%);  
 }
 
-/* Add custom styles for the arrow icon */
+
 select::after {
-    content: '\25BC'; /* Unicode character for down arrow */
+    content: '\25BC'; 
     position: absolute;
     top: 50%;
     right: 10px;
@@ -194,10 +194,10 @@ select::after {
     color: #666;
 }
 
-/* Style on hover/focus */
+
 select:hover,
 select:focus {
-    border-color: #ff0000; /* Change border color on hover/focus */
+    border-color: #ff0000; 
 }
 
 
@@ -208,7 +208,7 @@ select:focus {
 
 
 .svg:hover{
-    transform: rotate(-15deg); /* Adjust the rotation angle as needed */
+    transform: rotate(-15deg); 
 
 }
 
@@ -297,3 +297,49 @@ select:focus {
   top: 0;
   border-radius: 10px;
 }
+
+
+
+@media only screen and (max-width: 970px) {
+    .offers{
+        flex-direction: column;
+    }
+
+    .offer{
+        width: 90%;
+    }
+
+
+    .movies{
+        flex-direction: column;
+        height: unset;
+        padding: 50px;
+    }
+
+    .texts{
+        width: 100% !important;
+    }
+
+    .texts-text{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+  }
+
+  @media only screen and (max-width: 800px) {
+    .games{
+        flex-direction: column;
+    }
+  }
+
+
+
+  @media only screen and (max-width: 500px) {
+    .site-movies{
+        width: 100px;
+        height: 150px;
+    }
+
+   
+  }

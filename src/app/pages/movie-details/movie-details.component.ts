@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieApiServiceService } from 'src/app/service/movie-api-service.service';
 
@@ -51,6 +51,24 @@ export class MovieDetailsComponent implements OnInit {
       this.getMovieCastResult = result.cast;
     });
   }
+
+
+  navbg!:any;
+  @HostListener('document:scroll') scrollover(){
+    
+    if(document.body.scrollTop > 0 || document.documentElement.scrollTop > 0)
+    {
+      this.navbg = {
+        'background-color':'rgba(0,0,0,0.7)'
+      }
+    }else
+    {
+        this.navbg = {
+          'background-color':''
+        }
+    }
+  }
+  
 
 
 }

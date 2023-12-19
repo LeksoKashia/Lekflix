@@ -1,4 +1,5 @@
-<!-- banner start  -->
+<app-header [moviess]="navbg"></app-header>
+
 <div class="contain-fluid">
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -40,7 +41,7 @@
     </div>
 
     <div class="texts" style="width: 40%;height: 50%;">
-      <div style="display: flex; gap: 10px">
+      <div style="display: flex; gap: 10px" class="texts-text">
 
         <select (change)="fetchMovie($event)">
           <option value="trending">trending</option>

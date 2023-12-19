@@ -10,12 +10,12 @@ import {HttpClientModule} from '@angular/common/http';
 import { MovieApiServiceService } from './service/movie-api-service.service';
 
 import {ReactiveFormsModule} from '@angular/forms';
-import { MoviesComponent } from './movies/movies.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PopUpComponent } from './pages/pop-up/pop-up.component';
 
 import {MatDialogModule} from "@angular/material/dialog";
+import { HeaderComponent } from './pages/header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +23,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     HomeComponent,
     SearchComponent,
     MovieDetailsComponent,
-    MoviesComponent,
     FooterComponent,
-    PopUpComponent
+    PopUpComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
